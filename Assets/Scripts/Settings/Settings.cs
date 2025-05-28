@@ -4,12 +4,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
     [SerializeField] private GameObject _settingsCanvas;
     [SerializeField] private GameObject _menuCanvas;
     [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private Sprite _onSprite;
+    [SerializeField] private Sprite _offSprite;
     [SerializeField] private string _musicKey;
     [SerializeField] private string _soundKey;
     [SerializeField] private string _onText;
@@ -20,6 +23,8 @@ public class Settings : MonoBehaviour
     private void Start()
     {
         _currentPanel = _menuCanvas;
+        PlayerPrefs.GetInt("Music", 20);
+        PlayerPrefs.GetInt("Sound", 20);
     }
 
     public void OpenClosePanel(GameObject panel)
@@ -73,6 +78,18 @@ public class Settings : MonoBehaviour
         {
             text.text = _onText;
             _audioMixer.SetFloat(key, -80);
+        }
+    }
+
+    public void ChangeSprites(Image image)
+    {
+        if (image.sprite == _onSprite)
+        {
+            image.sprite = _offSprite;
+        }
+        else
+        {
+            image.sprite = _onSprite;
         }
     }
 }
