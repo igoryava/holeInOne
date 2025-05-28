@@ -22,6 +22,7 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         _currentPanel = _menuCanvas;
         PlayerPrefs.GetInt("Music", 20);
         PlayerPrefs.GetInt("Sound", 20);
@@ -45,18 +46,56 @@ public class Settings : MonoBehaviour
     public void OnVolumeMusicChanged(TextMeshProUGUI text)
     {
         SwitchOnOff(text, _musicKey);
+        if (text.text == _onText)
+        {
+            PlayerPrefs.SetInt("Music", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Music", 0);
+        }
     }
 
     public void OnVolumeSoundChanged(TextMeshProUGUI text)
     {
         SwitchOnOff(text, _soundKey);
+        if (text.text == _onText)
+        {
+            PlayerPrefs.SetInt("Sound", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Sound", 0);
+        }
     }
+
+    public void OnVibrationChanged(TextMeshProUGUI text)
+    {
+        if (text.text == _onText)
+        {
+            text.text = _offText;
+        }
+        else
+        {
+            text.text = _onText;
+        }
+
+        if (text.text == _onText)
+        {
+            PlayerPrefs.SetInt("Vibration", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Vibration", 0);
+        }
+    }
+
 
     public void Exit()
     {
         Application.Quit();
     }
-    
+
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
@@ -64,7 +103,17 @@ public class Settings : MonoBehaviour
 
     public void Play()
     {
-        
+        int level = PlayerPrefs.GetInt("CompleatedLevels", 1);
+
+        if (level == 1)
+        {
+            SceneManager.LoadScene("Game");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("CurrentLevel", level + 1);
+            SceneManager.LoadScene("Game");
+        }
     }
 
     private void SwitchOnOff(TextMeshProUGUI text, string key)
@@ -72,12 +121,12 @@ public class Settings : MonoBehaviour
         if (text.text == _onText)
         {
             text.text = _offText;
-            _audioMixer.SetFloat(key, 20);
+            _audioMixer.SetFloat(key, -80);
         }
         else
         {
             text.text = _onText;
-            _audioMixer.SetFloat(key, -80);
+            _audioMixer.SetFloat(key, 20);
         }
     }
 

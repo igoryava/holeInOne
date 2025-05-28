@@ -11,6 +11,8 @@ public class BallRespawn : MonoBehaviour
 
     public event Action Restarted;
 
+    public bool IsRespawning { get; private set; }
+
     public void Restart()
     {
         StartCoroutine(Respawning());
@@ -18,8 +20,15 @@ public class BallRespawn : MonoBehaviour
 
     private IEnumerator Respawning()
     {
+        IsRespawning = true;
         _movement.Block();
         yield return new WaitForSeconds(_respawnDelay);
+        QuickRespawn();
+        IsRespawning = false;
+    }
+
+    public void QuickRespawn()
+    {
         _movement.UnBlock();
 
         transform.position = _spawnPoint.position;

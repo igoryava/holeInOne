@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class BallEquipment : MonoBehaviour
 {
-    [SerializeField] private Equipable _defaultEquipable;
+    [SerializeField] private Equipable[] _equipables;
     private Equipable _currentEquipable;
 
     private void Start()
     {
-        _currentEquipable = _defaultEquipable;
+        _currentEquipable = _equipables[PlayerPrefs.GetInt("Skin", 1) - 1];
+        _currentEquipable.GetEquiped();
     }
 
     public void Equip(Equipable equipable)
@@ -19,6 +20,7 @@ public class BallEquipment : MonoBehaviour
         {
             return;
         }
+
         _currentEquipable?.GetUnEquiped();
         _currentEquipable = equipable;
         _currentEquipable.GetEquiped();
