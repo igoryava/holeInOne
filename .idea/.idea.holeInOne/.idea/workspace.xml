@@ -20,11 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06957d68-f9fb-4966-a2ea-8b64b7c8a72e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelEndStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelEndStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +72,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Settings/Save/SoundSave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Settings/Save/VibrationSave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Equipable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/SkinsShop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/BalanceUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Balance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Level/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelEndStats.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" />
       </list>
     </option>
   </component>
@@ -153,6 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1748517780125" />
+    <state x="92" y="92" width="2376" height="1210" key="VCS.FileHistoryDialog" timestamp="1748520746535">
+      <screen x="0" y="0" width="2560" height="1394" />
+    </state>
+    <state x="92" y="92" width="2376" height="1210" key="VCS.FileHistoryDialog/-1440.534.1440.854/0.0.2560.1394@0.0.2560.1394" timestamp="1748520746535" />
     <state x="565" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1748518580365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
