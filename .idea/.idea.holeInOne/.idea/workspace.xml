@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="06957d68-f9fb-4966-a2ea-8b64b7c8a72e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
