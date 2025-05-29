@@ -118,7 +118,7 @@ public class Settings : MonoBehaviour
                 SceneManager.LoadScene("Game");
                 return;
             }
-            PlayerPrefs.SetInt("CurrentLevel", level + 1);
+            PlayerPrefs.SetInt("CurrentLevel", level);
             SceneManager.LoadScene("Game");
         }
     }
