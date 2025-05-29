@@ -10,7 +10,10 @@ public class LevelEndStats : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _attemptsText;
     [SerializeField] private TextMeshProUGUI _rateText;
     [SerializeField] private Balance _balance;
+    [SerializeField] private GameObject _continueButton;
+    [SerializeField] private LevelSelector _levelSelector;
     [SerializeField] private int _gain;
+    [SerializeField] private int _maxLevel;
 
     [SerializeField] private BallHealth _health;
     [SerializeField] private BallWin _win;
@@ -63,6 +66,11 @@ public class LevelEndStats : MonoBehaviour
 
     public void ShowStats()
     {
+        Debug.Log(_levelSelector.CurrentLevel);
+        if (_levelSelector.CurrentLevel >= _maxLevel)
+        {
+            _continueButton.SetActive(false);
+        }
         _accuracyText.text = _accuracy.ToString() + "%";
         _attemptsText.text = _attemps.ToString();
         _rateText.text = _rate;

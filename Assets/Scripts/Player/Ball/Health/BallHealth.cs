@@ -6,13 +6,14 @@ using UnityEngine;
 public class BallHealth : Health
 {
     [SerializeField] private BallRespawn _respawn;
+    [SerializeField] private AudioSource _ballSound;
 
     private bool _restarted = true;
 
     public override void TakeDamage(float value)
     {
         base.TakeDamage(value);
-
+        _ballSound.Play();
         if (!_restarted)
             return;
         _restarted = false;
