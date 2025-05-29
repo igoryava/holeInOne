@@ -8,7 +8,7 @@ public class Balance : MonoBehaviour
 {
     [SerializeField] private int _startBalance;
     public int CurrentBalance { get; private set; }
-    public event Action<int> BalanceChanged;
+    public event Action BalanceChanged;
 
 
     private void Start()
@@ -24,14 +24,15 @@ public class Balance : MonoBehaviour
         }
         buyable.GetBought();
         CurrentBalance -= price;
-        BalanceChanged?.Invoke(CurrentBalance);
+        BalanceChanged?.Invoke();
         PlayerPrefs.SetInt("Money", CurrentBalance);
     }
     
     public void EarnMoney(int gain)
     {
         CurrentBalance += gain;
-        BalanceChanged?.Invoke(CurrentBalance);
+        Debug.Log(CurrentBalance);
+        BalanceChanged?.Invoke();
         PlayerPrefs.SetInt("Money", CurrentBalance);
     }
 }

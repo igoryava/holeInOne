@@ -11,16 +11,13 @@ public class BalanceUI : MonoBehaviour
 
     private void OnEnable()
     {
+        _balanceText.text = PlayerPrefs.GetInt("Money", 50).ToString();
         _balance.BalanceChanged += ChangeBalance;
     }
 
-    private void Start()
+    public void ChangeBalance()
     {
-        _balanceText.text = _balance.CurrentBalance.ToString();
-    }
-
-    public void ChangeBalance(int currentBalance)
-    {
+        Debug.Log(_balance.CurrentBalance);
         _balanceText.text = _balance.CurrentBalance.ToString();
     }
 

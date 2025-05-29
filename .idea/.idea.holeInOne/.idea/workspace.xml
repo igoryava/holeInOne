@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06957d68-f9fb-4966-a2ea-8b64b7c8a72e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.holeInOne/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelEndStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelEndStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Settings/Settings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Balance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Balance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Equipable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Equipable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/SkinsShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/SkinsShop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/BalanceUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/BalanceUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,8 +74,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/SkinsShop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Level/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Level/LevelEndStats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/BalanceUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Balance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/BalanceUI.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1748456999155</updated>
       <workItem from="1748457009044" duration="3213000" />
-      <workItem from="1748508922913" duration="5853000" />
+      <workItem from="1748508922913" duration="7155000" />
     </task>
     <servers />
   </component>
