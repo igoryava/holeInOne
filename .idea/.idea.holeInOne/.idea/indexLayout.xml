@@ -63,7 +63,6 @@
       <Path>.idea</Path>
       <Path>DYURKA_BurstDebugInformation_DoNotShip</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>
