@@ -17,11 +17,11 @@ public class Equipable : MonoBehaviour
     public void GetEquiped()
     {
         PlayerPrefs.SetInt("Skin", ID);
-        _equipText.text = "Equiped";
+        _equipText.text = "EQUIPED";
     }
 
     public void GetUnEquiped()
     {
-        _equipText.text = "Equip";
+        _equipText.text = "EQUIP";
     }
 }

@@ -6,32 +6,32 @@ using UnityEngine;
 
 public class Balance : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _balanceText;
     [SerializeField] private int _startBalance;
     public int CurrentBalance { get; private set; }
+    public event Action<int> BalanceChanged;
 
 
     private void Start()
     {
         CurrentBalance = PlayerPrefs.GetInt("Money", _startBalance);
-        _balanceText.text = CurrentBalance.ToString();
     }
 
-    public void SpendMoney(int price)
+    public void SpendMoney(int price, Buyable buyable)
     {
         if (CurrentBalance - price < 0)
         {
             return;
         }
+        buyable.GetBought();
         CurrentBalance -= price;
-        _balanceText.text = CurrentBalance.ToString();
+        BalanceChanged?.Invoke(CurrentBalance);
         PlayerPrefs.SetInt("Money", CurrentBalance);
     }
     
     public void EarnMoney(int gain)
     {
         CurrentBalance += gain;
-        _balanceText.text = CurrentBalance.ToString();
+        BalanceChanged?.Invoke(CurrentBalance);
         PlayerPrefs.SetInt("Money", CurrentBalance);
     }
 }

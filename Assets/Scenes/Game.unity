@@ -929,7 +929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578311040819178956, guid: b71d70c1341cf084b8e29e0e4e6f8ff1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.019
+      value: -3.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 4578311040819178956, guid: b71d70c1341cf084b8e29e0e4e6f8ff1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1807,7 +1807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.00006, y: 19}
+  m_AnchoredPosition: {x: -182.00003, y: 19}
   m_SizeDelta: {x: -433.13, y: -280.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353115898
@@ -1993,6 +1993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsCanvas: {fileID: 116626064}
   _menuCanvas: {fileID: 116626064}
+  _maxLevels: 0
   _audioMixer: {fileID: 24100000, guid: c33e40fbb647cfd46be39d024cb5bc3e, type: 2}
   _onSprite: {fileID: 21300000, guid: f600a32783e341d4ca15a70ed4788b7f, type: 3}
   _offSprite: {fileID: 21300000, guid: 59055f4dd6b4bde439af4542e66a3244, type: 3}
@@ -2795,7 +2796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.999756, y: 145}
+  m_AnchoredPosition: {x: -19.999786, y: 145}
   m_SizeDelta: {x: -433.13, y: -280.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543217055
@@ -3029,7 +3030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578311040819178956, guid: b71d70c1341cf084b8e29e0e4e6f8ff1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.019
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 4578311040819178956, guid: b71d70c1341cf084b8e29e0e4e6f8ff1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3334,6 +3335,7 @@ GameObject:
   - component: {fileID: 649408489}
   - component: {fileID: 649408492}
   - component: {fileID: 649408493}
+  - component: {fileID: 649408494}
   m_Layer: 0
   m_Name: WinCanvas
   m_TagString: Untagged
@@ -3454,8 +3456,22 @@ MonoBehaviour:
   _accuracyText: {fileID: 2037453243}
   _attemptsText: {fileID: 267487163}
   _rateText: {fileID: 1491488631}
+  _balance: {fileID: 649408494}
+  _gain: 50
   _health: {fileID: 1885015231}
   _win: {fileID: 1885015234}
+--- !u!114 &649408494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649408487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfb17c0ac26c7e459fe0da27bef0566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &661522805
 GameObject:
   m_ObjectHideFlags: 0
@@ -4757,7 +4773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.00006, y: -103}
+  m_AnchoredPosition: {x: -182.00003, y: -103}
   m_SizeDelta: {x: -433.13, y: -280.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1012511388
@@ -7540,7 +7556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578311040819178956, guid: b71d70c1341cf084b8e29e0e4e6f8ff1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.769
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 4578311040819178956, guid: b71d70c1341cf084b8e29e0e4e6f8ff1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7924,6 +7940,7 @@ MonoBehaviour:
   - {fileID: 1032976949}
   - {fileID: 557553306}
   _reload: {fileID: 1792621636}
+  _lastLevel: 10
 --- !u!1001 &1819733493
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class Settings : MonoBehaviour
 {
     [SerializeField] private GameObject _settingsCanvas;
     [SerializeField] private GameObject _menuCanvas;
+    [SerializeField] private int _maxLevels;
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private Sprite _onSprite;
     [SerializeField] private Sprite _offSprite;
@@ -111,6 +112,12 @@ public class Settings : MonoBehaviour
         }
         else
         {
+            if (level >= _maxLevels)
+            {
+                PlayerPrefs.SetInt("CurrentLevel", 1);
+                SceneManager.LoadScene("Game");
+                return;
+            }
             PlayerPrefs.SetInt("CurrentLevel", level + 1);
             SceneManager.LoadScene("Game");
         }

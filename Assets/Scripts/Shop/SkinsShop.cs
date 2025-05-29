@@ -11,8 +11,7 @@ public class SkinsShop : MonoBehaviour
     {
         if (!buyable.Bought && _balance.CurrentBalance > 0)
         {
-            _balance.SpendMoney(buyable.Price);
-            buyable.GetBought();
+            _balance.SpendMoney(buyable.Price, buyable);
         }
     }
 }

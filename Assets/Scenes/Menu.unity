@@ -1977,6 +1977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsCanvas: {fileID: 860847779}
   _menuCanvas: {fileID: 480401541}
+  _maxLevels: 10
   _audioMixer: {fileID: 24100000, guid: c33e40fbb647cfd46be39d024cb5bc3e, type: 2}
   _onSprite: {fileID: 21300000, guid: f600a32783e341d4ca15a70ed4788b7f, type: 3}
   _offSprite: {fileID: 21300000, guid: 59055f4dd6b4bde439af4542e66a3244, type: 3}
@@ -2048,6 +2049,7 @@ GameObject:
   - component: {fileID: 541752432}
   - component: {fileID: 541752433}
   - component: {fileID: 541752434}
+  - component: {fileID: 541752435}
   m_Layer: 0
   m_Name: Skins
   m_TagString: Untagged
@@ -2107,8 +2109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfb17c0ac26c7e459fe0da27bef0566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _balanceText: {fileID: 325046606}
   _startBalance: 50
+  _balanceUI: {fileID: 541752435}
 --- !u!114 &541752434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,6 +2128,20 @@ MonoBehaviour:
   - {fileID: 657036818}
   - {fileID: 1361473897}
   - {fileID: 1914059367}
+--- !u!114 &541752435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541752430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a213ac609fb8d1e41b141d5cd8983b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _balance: {fileID: 541752433}
+  _balanceText: {fileID: 325046606}
 --- !u!1 &543891914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,7 +2230,7 @@ MonoBehaviour:
   m_fontSize: 54.5
   m_fontSizeBase: 54.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2799,7 +2815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9e29661fa1a0543b6ff3e97283db88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Price>k__BackingField: 3
+  <Price>k__BackingField: 100
   <Bought>k__BackingField: 0
   <BuyButton>k__BackingField: {fileID: 789182496}
   <Text>k__BackingField: {fileID: 197024395}
@@ -4412,7 +4428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9e29661fa1a0543b6ff3e97283db88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Price>k__BackingField: 5
+  <Price>k__BackingField: 250
   <Bought>k__BackingField: 0
   <BuyButton>k__BackingField: {fileID: 1091702699}
   <Text>k__BackingField: {fileID: 278095835}
@@ -4943,7 +4959,7 @@ MonoBehaviour:
   m_fontSize: 54.5
   m_fontSizeBase: 54.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -5078,7 +5094,7 @@ MonoBehaviour:
   m_fontSize: 54.5
   m_fontSizeBase: 54.5
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -5614,7 +5630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d9e29661fa1a0543b6ff3e97283db88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Price>k__BackingField: 8
+  <Price>k__BackingField: 400
   <Bought>k__BackingField: 0
   <BuyButton>k__BackingField: {fileID: 1827954991}
   <Text>k__BackingField: {fileID: 1521415820}
@@ -7019,6 +7035,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5887714147287490046, guid: 8a79a1c09eabd6846a2125f83f4ecc25, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815542078782197231, guid: 8a79a1c09eabd6846a2125f83f4ecc25, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815542078782197231, guid: 8a79a1c09eabd6846a2125f83f4ecc25, type: 3}
+      propertyPath: m_enableAutoSizing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9174852444065824424, guid: 8a79a1c09eabd6846a2125f83f4ecc25, type: 3}

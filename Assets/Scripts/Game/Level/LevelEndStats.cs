@@ -9,6 +9,8 @@ public class LevelEndStats : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _accuracyText;
     [SerializeField] private TextMeshProUGUI _attemptsText;
     [SerializeField] private TextMeshProUGUI _rateText;
+    [SerializeField] private Balance _balance;
+    [SerializeField] private int _gain;
 
     [SerializeField] private BallHealth _health;
     [SerializeField] private BallWin _win;
@@ -69,6 +71,7 @@ public class LevelEndStats : MonoBehaviour
 
     private void SaveStats()
     {
+        _balance.EarnMoney(_gain);
         int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
         PlayerPrefs.SetInt(currentLevel + "Stars", _stars);
         PlayerPrefs.SetInt("CompleatedLevels", currentLevel);

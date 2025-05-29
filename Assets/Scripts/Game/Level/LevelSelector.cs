@@ -8,6 +8,7 @@ public class LevelSelector : MonoBehaviour
 {
     [SerializeField] private GameObject[] _levels;
     [SerializeField] private LevelReload _reload;
+    [SerializeField] private int _lastLevel;
 
     public int CurrentLevel { get; private set; }
 
@@ -48,6 +49,10 @@ public class LevelSelector : MonoBehaviour
         CurrentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
 
         _currentLevel.SetActive(false);
+        if (CurrentLevel - 1 >= _lastLevel)
+        {
+            SceneManager.LoadScene("Menu");
+        }
         _levels[CurrentLevel - 1].SetActive(true);
         _currentLevel = _levels[CurrentLevel - 1];
         _reload.Reload();
