@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Lofelt.NiceVibrations;
 
 public class BallHealth : Health
 {
@@ -14,6 +15,7 @@ public class BallHealth : Health
     {
         base.TakeDamage(value);
         _ballSound.Play();
+        GetComponent<HapticSource>().Play();
         if (!_restarted)
             return;
         _restarted = false;

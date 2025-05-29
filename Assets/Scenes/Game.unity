@@ -2957,6 +2957,7 @@ GameObject:
   - component: {fileID: 415222295}
   - component: {fileID: 415222294}
   - component: {fileID: 415222293}
+  - component: {fileID: 415222296}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3040,6 +3041,20 @@ Transform:
   m_Father: {fileID: 241235523}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &415222296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415222292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb29a83998eb4949bc0a9c8e5662fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outputLevel: 1
+  _hapticsEnabled: 1
 --- !u!1001 &415944343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9124,6 +9139,7 @@ GameObject:
   - component: {fileID: 1885015233}
   - component: {fileID: 1885015234}
   - component: {fileID: 1885015235}
+  - component: {fileID: 1885015236}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -9297,6 +9313,24 @@ MonoBehaviour:
   - {fileID: 1220505429}
   - {fileID: 2101474014}
   - {fileID: 503407243}
+--- !u!114 &1885015236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885015224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20df93fb7de8457baa15a213a53ab19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: -8404250095460277587, guid: 01f1a722d69d74aa39b5fd30a899412d, type: 3}
+  priority: 0
+  _fallbackPreset: 5
+  _loop: 0
+  _level: 1
+  _frequencyShift: 0
 --- !u!1001 &1900411590
 PrefabInstance:
   m_ObjectHideFlags: 0
