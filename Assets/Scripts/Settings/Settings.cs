@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Lofelt.NiceVibrations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -10,6 +11,7 @@ public class Settings : MonoBehaviour
 {
     [SerializeField] private GameObject _settingsCanvas;
     [SerializeField] private GameObject _menuCanvas;
+    [SerializeField] private HapticSource _hapticSource;
     [SerializeField] private int _maxLevels;
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private Sprite _onSprite;
@@ -25,8 +27,8 @@ public class Settings : MonoBehaviour
     {
         Time.timeScale = 1;
         _currentPanel = _menuCanvas;
-        PlayerPrefs.GetInt("Music", 20);
-        PlayerPrefs.GetInt("Sound", 20);
+        PlayerPrefs.GetInt("Music", 0);
+        PlayerPrefs.GetInt("Sound", 0);
     }
 
     public void OpenClosePanel(GameObject panel)
@@ -84,10 +86,19 @@ public class Settings : MonoBehaviour
         if (text.text == _onText)
         {
             PlayerPrefs.SetInt("Vibration", 1);
+            if (_hapticSource != null)
+            {
+                _hapticSource.enabled = true;
+            }
         }
         else
         {
             PlayerPrefs.SetInt("Vibration", 0);
+            _hapticSource.level = 0;
+            if (_hapticSource != null)
+            {
+                _hapticSource.enabled = false;
+            }
         }
     }
 
@@ -133,7 +144,7 @@ public class Settings : MonoBehaviour
         else
         {
             text.text = _onText;
-            _audioMixer.SetFloat(key, 20);
+            _audioMixer.SetFloat(key, 0);
         }
     }
 

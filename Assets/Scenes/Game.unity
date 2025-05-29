@@ -2520,7 +2520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.00003, y: 19}
+  m_AnchoredPosition: {x: -182.00002, y: 19}
   m_SizeDelta: {x: -433.13, y: -280.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353115898
@@ -2706,7 +2706,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsCanvas: {fileID: 116626064}
   _menuCanvas: {fileID: 116626064}
-  _maxLevels: 0
+  _hapticSource: {fileID: 1885015236}
+  _maxLevels: 10
   _audioMixer: {fileID: 24100000, guid: c33e40fbb647cfd46be39d024cb5bc3e, type: 2}
   _onSprite: {fileID: 21300000, guid: f600a32783e341d4ca15a70ed4788b7f, type: 3}
   _offSprite: {fileID: 21300000, guid: 59055f4dd6b4bde439af4542e66a3244, type: 3}
@@ -5518,7 +5519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.00003, y: -103}
+  m_AnchoredPosition: {x: -182.00002, y: -103}
   m_SizeDelta: {x: -433.13, y: -280.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1012511388
