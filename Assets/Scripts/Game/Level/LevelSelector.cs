@@ -46,15 +46,21 @@ public class LevelSelector : MonoBehaviour
     public void NextLevel()
     {
         PlayerPrefs.SetInt("CurrentLevel", CurrentLevel + 1);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        return;
         CurrentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
 
         _currentLevel.SetActive(false);
+
+        _levels[CurrentLevel - 1].SetActive(true);
+        _currentLevel = _levels[CurrentLevel - 1];
         if (CurrentLevel - 1 >= _lastLevel)
         {
             SceneManager.LoadScene("Menu");
+            return;
         }
-        _levels[CurrentLevel - 1].SetActive(true);
-        _currentLevel = _levels[CurrentLevel - 1];
+
         _reload.Reload();
         LevelSwitched?.Invoke();
     }

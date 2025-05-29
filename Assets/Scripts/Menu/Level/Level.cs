@@ -21,13 +21,6 @@ public class Level : MonoBehaviour
             SetRate();
             return;
         }
-
-        if (PlayerPrefs.GetInt("CompleatedLevels", 1) + 1 == _number)
-        {
-            SetRate();
-            return;
-        }
-
         if (PlayerPrefs.GetInt("CompleatedLevels", 1) < _number)
         {
             Lock();

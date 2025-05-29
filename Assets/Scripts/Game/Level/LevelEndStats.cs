@@ -18,7 +18,7 @@ public class LevelEndStats : MonoBehaviour
     private int _attemps = 1;
     private int _accuracy = 100;
     private string _rate = "PERFECT";
-    private int _stars;
+    private int _stars = 3;
 
     private void OnEnable()
     {
@@ -67,6 +67,7 @@ public class LevelEndStats : MonoBehaviour
         _attemptsText.text = _attemps.ToString();
         _rateText.text = _rate;
         SaveStats();
+        Debug.Log(PlayerPrefs.GetInt(PlayerPrefs.GetInt("CurrentLevel", 1) + "Stars", _stars));
     }
 
     private void SaveStats()
@@ -74,7 +75,17 @@ public class LevelEndStats : MonoBehaviour
         _balance.EarnMoney(_gain);
         int currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
         PlayerPrefs.SetInt(currentLevel + "Stars", _stars);
-        PlayerPrefs.SetInt("CompleatedLevels", currentLevel);
+
+        if (currentLevel < PlayerPrefs.GetInt("CompleatedLevels", currentLevel))
+            return;
+
+        if (currentLevel == 10)
+        {
+            PlayerPrefs.SetInt("CompleatedLevels", 10);
+            return;
+        }
+
+        PlayerPrefs.SetInt("CompleatedLevels", currentLevel + 1);
     }
 
     private void OnDisable()
