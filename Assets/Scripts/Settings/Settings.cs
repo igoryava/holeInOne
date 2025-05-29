@@ -11,7 +11,7 @@ public class Settings : MonoBehaviour
 {
     [SerializeField] private GameObject _settingsCanvas;
     [SerializeField] private GameObject _menuCanvas;
-    [SerializeField] private HapticSource _hapticSource;
+    [SerializeField] private HapticReceiver _hapticSource;
     [SerializeField] private int _maxLevels;
     [SerializeField] private AudioMixer _audioMixer;
     [SerializeField] private Sprite _onSprite;
@@ -88,16 +88,15 @@ public class Settings : MonoBehaviour
             PlayerPrefs.SetInt("Vibration", 1);
             if (_hapticSource != null)
             {
-                _hapticSource.enabled = true;
+                _hapticSource.hapticsEnabled = true;
             }
         }
         else
         {
             PlayerPrefs.SetInt("Vibration", 0);
-            _hapticSource.level = 0;
             if (_hapticSource != null)
             {
-                _hapticSource.enabled = false;
+                _hapticSource.hapticsEnabled = false;
             }
         }
     }
@@ -129,6 +128,7 @@ public class Settings : MonoBehaviour
                 SceneManager.LoadScene("Game");
                 return;
             }
+
             PlayerPrefs.SetInt("CurrentLevel", level);
             SceneManager.LoadScene("Game");
         }

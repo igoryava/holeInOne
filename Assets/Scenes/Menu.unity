@@ -563,6 +563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 189694904}
   - component: {fileID: 189694905}
+  - component: {fileID: 189694906}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -578,12 +579,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189694903}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.1187923, y: 0.6989211, z: 73.30392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1247624563}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &189694905
 AudioSource:
@@ -681,6 +682,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &189694906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189694903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f3ffd68e56063499035dfae2ad9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &197024395 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7815542078782197231, guid: 8a79a1c09eabd6846a2125f83f4ecc25, type: 3}
@@ -2354,6 +2367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsCanvas: {fileID: 860847779}
   _menuCanvas: {fileID: 480401541}
+  _hapticSource: {fileID: 0}
   _maxLevels: 10
   _audioMixer: {fileID: 24100000, guid: c33e40fbb647cfd46be39d024cb5bc3e, type: 2}
   _onSprite: {fileID: 21300000, guid: f600a32783e341d4ca15a70ed4788b7f, type: 3}
@@ -2411,6 +2425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _saveKey: Vibration
+  _source: {fileID: 0}
   _text: {fileID: 2063821480}
   _offSpite: {fileID: 21300000, guid: 59055f4dd6b4bde439af4542e66a3244, type: 3}
   _image: {fileID: 1936324467}
@@ -4736,7 +4751,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 189694904}
   - {fileID: 1814311612}
   - {fileID: 503194011}
   m_Father: {fileID: 0}

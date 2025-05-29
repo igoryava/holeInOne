@@ -1972,6 +1972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314011890}
   - component: {fileID: 314011891}
+  - component: {fileID: 314011892}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -2090,6 +2091,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &314011892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314011889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f3ffd68e56063499035dfae2ad9563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &325890963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2520,7 +2533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.00002, y: 19}
+  m_AnchoredPosition: {x: -182.00003, y: 19}
   m_SizeDelta: {x: -433.13, y: -280.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353115898
@@ -2653,6 +2666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _saveKey: Vibration
+  _source: {fileID: 415222296}
   _text: {fileID: 116626069}
   _offSpite: {fileID: 21300000, guid: 59055f4dd6b4bde439af4542e66a3244, type: 3}
   _image: {fileID: 116626062}
@@ -2706,7 +2720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsCanvas: {fileID: 116626064}
   _menuCanvas: {fileID: 116626064}
-  _hapticSource: {fileID: 1885015236}
+  _hapticSource: {fileID: 415222296}
   _maxLevels: 10
   _audioMixer: {fileID: 24100000, guid: c33e40fbb647cfd46be39d024cb5bc3e, type: 2}
   _onSprite: {fileID: 21300000, guid: f600a32783e341d4ca15a70ed4788b7f, type: 3}
@@ -5519,7 +5533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -182.00002, y: -103}
+  m_AnchoredPosition: {x: -182.00003, y: -103}
   m_SizeDelta: {x: -433.13, y: -280.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1012511388
